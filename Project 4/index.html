@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <script src="https://kit.fontawesome.com/2de0fe502a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="wrapper__info">
+            <h2>Stoper</h2>
+            <i class="fa-solid fa-question"></i>
+            <p class="time">0:00</p>
+            <p class="stopwatch">0:00</p>
+        </div>
+
+        <div class="wrapper__buttons">
+            <button class="play"> <i class="fa-solid fa-play"></i></button>
+            <button class="pause"> <i class="fa-solid fa-pause"></i></button>
+            <button class="stop"> <i class="fa-solid fa-stop"></i></button>
+            <button class="reset"> <i class="fa-solid fa-xmark"></i></button>
+            <button class="archivebtn">archiwum</button>
+        </div>
+
+        <div class="archive">
+
+            <h3>Ostatnie pomiary:</h3>
+            <ul class="saved-times">
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="modal-shadow">
+        <div class="modal">
+            <h3>Instrukcja: </h3>
+            <p><i class="fa-solid fa-play"> - Start</i></p>
+            <p><i class="fa-solid fa-pause"> - Pauza</i></p>
+            <p><i class="fa-solid fa-stop"> - Stop</i></p>
+            <p><i class="fa-solid fa-xmark"> - Skasuj wszystko</i></p>
+            <button class="close">Zamknij</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
