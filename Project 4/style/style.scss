@@ -139,7 +139,15 @@ body {
 	}
 
 	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin-top: 20px;
+		flex-wrap: wrap;
+		gap: 5px;
+		.archivebtn {
+			width: 100%;
+		}
 	}
 	.archive {
 		display: none;
@@ -204,8 +212,8 @@ button {
 	}
 }
 
-.wrapper .show {
-	display: block;
+.show {
+	display: block !important;
 }
 
 .show-flex {
