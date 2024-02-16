@@ -10,6 +10,7 @@ const infoBtn = document.querySelector(".fa-question");
 const time = document.querySelector(".time");
 const stopWatch = document.querySelector(".stopwatch");
 const ulList = document.querySelector(".saved-times");
+const errorInfo = document.querySelector(".error");
 
 let seconds = 0;
 let minutes = 0;
@@ -75,7 +76,13 @@ const clearHandle = () => {
 };
 
 const showArchive = () => {
-	archive.classList.toggle("show");
+	if (archiveSaved.length !== 0) {
+		archive.classList.toggle("show");
+		errorInfo.textContent = "";
+	} else {
+		archive.classList.remove("show");
+		errorInfo.textContent = "Brak danych!";
+	}
 };
 
 const archiveMem = () => {
