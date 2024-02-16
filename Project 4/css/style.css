@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--theme-color: lime;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -35,14 +39,83 @@ body {
 	font-size: 42px;
 	margin-bottom: 20px;
 }
-.wrapper__info .fa-question {
-	position: absolute;
-	left: 320px;
-	top: -15px;
-	cursor: pointer;
+.wrapper__info__panel {
 	color: rgb(245, 245, 245);
+	position: relative;
+	top: -90px;
+	left: 260px;
+	width: 100px;
+	height: 50px;
+}
+.wrapper__info__panel .fa-solid {
+	position: absolute;
+	cursor: pointer;
 	font-size: 24px;
 	padding: 10px;
+}
+.wrapper__info__panel .fa-solid:hover {
+	color: var(--theme-color);
+}
+.wrapper__info__panel .fa-paintbrush {
+	left: 25px;
+	top: 0px;
+}
+.wrapper__info__panel .fa-question {
+	left: 70px;
+	top: 0px;
+}
+.wrapper__info__panel__colors {
+	display: none;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	border: 2px solid rgba(0, 0, 0, 0.355);
+	background-color: rgba(0, 0, 0, 0.355);
+	border-radius: 5px;
+	left: 65px;
+	top: 40px;
+	height: 130px;
+	width: 45px;
+}
+.wrapper__info__panel__colors .color-blue {
+	position: relative;
+	background-color: royalblue;
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.355);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.wrapper__info__panel__colors .color-blue:hover {
+	box-shadow: 0px 0px 10px royalblue;
+}
+.wrapper__info__panel__colors .color-red {
+	position: relative;
+	background-color: tomato;
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.355);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.wrapper__info__panel__colors .color-red:hover {
+	box-shadow: 0px 0px 10px tomato;
+}
+.wrapper__info__panel__colors .color-green {
+	position: relative;
+	background-color: lime;
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.355);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+}
+.wrapper__info__panel__colors .color-green:hover {
+	box-shadow: 0px 0px 10px lime;
 }
 .wrapper__info .time {
 	font-size: 26px;
@@ -58,7 +131,6 @@ body {
 }
 .wrapper .archive {
 	display: none;
-	text-align: center;
 }
 .wrapper .archive h3 {
 	color: rgb(245, 245, 245);
@@ -72,7 +144,6 @@ body {
 
 .modal-shadow {
 	display: none;
-	opacity: 0;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -105,7 +176,7 @@ body {
 button {
 	padding: 10px 20px;
 	outline: none;
-	border: 1px solid lime;
+	border: 1px solid var(--theme-color);
 	border-radius: 5px;
 	color: rgb(245, 245, 245);
 	background: none;
@@ -115,19 +186,23 @@ button {
 	transition: background-color 0.3s;
 }
 button:hover {
-	background-color: lime;
+	background-color: var(--theme-color);
 }
 
 .show {
 	display: block !important;
-	animation: modal 0.5s forwards;
-} /*# sourceMappingURL=style.css.map */
+}
 
-@keyframes modal {
+.show-flex {
+	display: flex;
+	animation: panelShow 0.6s forwards;
+}
+
+@keyframes panelShow {
 	from {
 		opacity: 0;
 	}
 	to {
 		opacity: 1;
 	}
-}
+} /*# sourceMappingURL=style.css.map */
